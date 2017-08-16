@@ -49,7 +49,7 @@ class QuestionairsController extends Controller
     public function store(Request $request){
 
         $data = $request->all();
-        $data['user_id'] = 1;//Auth::id();
+        $data['user_id'] = Auth::id();
 
 
         $questionair = Questionair::create($data);
